@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="MineSweeper.Views.Components.MessageBoxRules"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MineSweeper.Views.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/MessageboxImages/MessageBoxRules.png"/>
+        </Border.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="600*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="250*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+            <Bold FontSize="20">Välkommen till MineSweeper!</Bold>
+            </TextBlock>
+            <TextBlock Background="{x:Null}" Grid.Row="2" Grid.Column="1" Margin="50,15,50,0" TextWrapping="Wrap" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <LineBreak/>
+                <LineBreak/>
+                <Bold>Spelet går ut på att röja ett minfält utan att detonera någon av minorna. Spelplanen består av ett rutnät där vissa rutor innehåller minor. Till en början är rutornas innehåll okänt. För att avslöja innehållet i en ruta vänsterklickar du på den.</Bold>
+                <LineBreak/>
+                <LineBreak/>
+                <Italic>- Om det visar sig att rutan innehåller en mina har du förlorat och spelet är över. Den första rutan man klickar på döljer aldrig en mina.</Italic>
+                <LineBreak/>
+                <LineBreak/>
+                <Italic>- Om rutan inte innehåller en mina,  visas istället en siffra som talar om hur många minor det finns sammanlagt i de åtta omkringliggande rutorna. Med hjälp av dessa siffror kan man räkna ut vilka rutor som innehåller minor, och vilka som inte gör det.</Italic>
+                <LineBreak/>
+                <LineBreak/>
+                <Italic>- Om rutan inte gränsar till någon mina alls visas ingen siffra.</Italic>
+                <LineBreak/>
+                <LineBreak/>
+                Genom att studera siffrorna som anger hur många minor rutorna angränsar till, kan du räkna ut vilka rutor som innehåller minor.
+                När du tror att en ruta innehåller en mina, högerklickar du på den rutan för att markera rutan med en flagga.
+                Du kan bara placera ut så många flaggor som det finns minor utplacerade på minfältet. Om du vill ta bort en flagga högerklickar du på rutan igen.
+                <LineBreak/>
+                <LineBreak/>
+                <Underline>Du vinner när alla rutor som inte innehåller minor är avslöjade.</Underline>
+            </TextBlock>
+
+        </Grid>
+    </Border>
+</UserControl>

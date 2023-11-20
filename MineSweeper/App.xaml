@@ -1,0 +1,15 @@
+﻿<Application x:Class="MineSweeper.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MineSweeper"
+             xmlns:vm="clr-namespace:MineSweeper.ViewModels"
+             xmlns:views="clr-namespace:MineSweeper.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate
+             DataType="{x:Type vm:GameViewModel}">
+            <views:GameView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
+    
